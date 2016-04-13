@@ -215,6 +215,7 @@ CREATE TABLE usuario (
     nombre_usuario character varying(15) NOT NULL,
     contrasena character varying(15) NOT NULL,
     vigente bit(1) DEFAULT B'1',
+    primer_acceso bit(1) DEFAULT B'1',
     perfil_idperfil integer NOT NULL,
     PRIMARY KEY(nombre_usuario)
 );
