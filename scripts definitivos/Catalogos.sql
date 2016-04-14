@@ -1,6 +1,3 @@
-INSERT INTO administrador (no_trabajador, nombre, apellido_paterno, apellido_materno, vigente) VALUES ('DIE.titulacion', 'Titulacion', 'DIE', 'FI', B'1');
-INSERT INTO usuario (nombre_usuario, contrasena, perfil_idperfil) VALUES ('DIE.titulacion', 'DIE.titulacion', 1);
-
 INSERT INTO cargo (id, nombre) VALUES (1, 'Jefe de Division');
 INSERT INTO cargo (id, nombre) VALUES (2, 'Jefe de Departamento');
 INSERT INTO cargo (id, nombre) VALUES (3, 'Coordinador de carrera');
@@ -52,3 +49,6 @@ INSERT INTO opcion_titulacion (clave, nombre, vigente) VALUES (10, 'Actividad de
 INSERT INTO perfil (idperfil, nombre, vigente) VALUES (1, 'Administrador', B'1');
 INSERT INTO perfil (idperfil, nombre, vigente) VALUES (2, 'Alumno', B'1');
 INSERT INTO perfil (idperfil, nombre, vigente) VALUES (3, 'Profesor', B'1');
+
+INSERT INTO administrador (no_trabajador, nombre, apellido_paterno, apellido_materno, vigente) VALUES ('DIE.titulacion', 'Titulacion', 'DIE', 'FI', B'1');
+INSERT INTO usuario (nombre_usuario, contrasena, perfil_idperfil) VALUES ('DIE.titulacion', 'DIE.titulacion', 1);
