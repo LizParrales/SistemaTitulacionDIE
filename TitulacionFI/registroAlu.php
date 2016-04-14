@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <?php
 	session_start();
-	if($_SESSION['perfil']!='Administrador'){
+	if(!isset($_SESSION['usuarioAdmin'])){
 		session_destroy();
 		header('Location: index.php');
 	}
@@ -27,6 +27,10 @@
 			?>
 		</div>
 		<div id="info">
+			<?php
+				echo("<h2>Bienvenid@ ".$_SESSION['usuarioAdmin']."</h2>");
+			?>
+
 			<h1>Formulario de Registro de Alumnos</h1>
 			<form method="post" action="registrarAlumno.php">
 				<label>Nombre: </label><input name="Nombre" id="Nombre" type="text" onblur="validarNombre()" /><br />
