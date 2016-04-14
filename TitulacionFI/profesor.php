@@ -1,7 +1,7 @@
 <?php
 
 	session_start();
-	if($_SESSION['perfil']!='Profesor'){
+	if(isset(!isset($_SESSION['usuarioProf']))){
 		session_destroy();
 		header('Location: index.php');
 	}

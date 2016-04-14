@@ -1,7 +1,7 @@
 <?php
 	session_start();
  	require_once('CLASSES/class.ConexionBD.php');
-	if($_SESSION['perfil']!='Administrador'){
+	if(!isset($_SESSION['usuarioAdmin'])){
 		session_destroy();
 		header('Location: index.php');
 	}
@@ -35,6 +35,10 @@
 			?>
 		</div>
 		<div id="info">
+			<?php
+				echo("<h2>Bienvenid@ ".$_SESSION['usuarioAdmin']."</h2>");
+			?>
+
 			<form enctype="multipart/form-data" method="post" action="subirAlumnosCSV.php">
 				<table>
 					<tr>

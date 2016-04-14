@@ -2,9 +2,9 @@
  	require_once('CLASSES/class.ConexionBD.php');
 
 	session_start();
-	if($_SESSION['perfil']!='Alumno'){
+	if(!isset($_SESSION['usuarioAlu'])){
 		session_destroy();
-		header('Location: </td><td style=\"font-size:medium\">index.php');
+		header('Location: index.php');
 	}
 	
 	function getCurrentUrl(){  

@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <?php
 	session_start();
-	if($_SESSION['perfil']!='Administrador'){
+	if(!isset($_SESSION['usuarioAdmin'])){
 		session_destroy();
 		header('Location: index.php');
 	}
@@ -24,7 +24,9 @@
 			?>
 		</div>
 		<div id="info">
-			<p>Bienvenido</p>
+			<?php
+				echo("<h2>Bienvenid@ ".$_SESSION['usuarioAdmin']."</h2>");
+			?>
 		</div>
 		<div id="footer">
 		</div>
