@@ -11,6 +11,8 @@
 	<div id="login">
 		<h1>Inicio de Sesi&oacute;n</h1>
 		<h3>DIE</h3>
+		<h3>FI</h3>
+		<h3>UNAM</h3>
 		<h3>Bienvenid@ por favor ingrese sus datos para iniciar sesi&oacute;n</h3>
 		<form method="post" action="index.php">
 			<label>Usuario</label><input name="usr" type="text" />
