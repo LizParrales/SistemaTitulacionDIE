@@ -16,7 +16,7 @@
 			$cbd = new ConexionBD('132.248.59.4', 'titulacionDIE', 'postgres', 'p0o9swt5gtr4e3sw');
 			$cx = $cbd->crearConexion();
 			
-			$sqlPerfil = "SELECT nombre FROM perfil INNER JOIN usuario ON usuario.perfil_idperfil = perfil.idperfil WHERE usuario.contrasena = '$this->contrasena'";
+			$sqlPerfil = "SELECT nombre FROM perfil INNER JOIN usuario ON usuario.perfil_idperfil = perfil.idperfil WHERE usuario.nombre_usuario = '$this->nombre'";
 			
 			$p = pg_query($sqlPerfil);
 			if($array = pg_fetch_array($p)){
