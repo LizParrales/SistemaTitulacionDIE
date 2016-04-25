@@ -204,10 +204,11 @@ CREATE TABLE profesor (
     ubicacion text,
     e_mail character varying(30),
     telefono character varying(40),
-    pagina_personal character varying(30),
+    pagina_personal character varying(45),
     departamento_clave_depto integer NOT NULL,
     categoria_id integer NOT NULL,
     cargo_id integer NOT NULL,
+    grado character varying(5),
     PRIMARY KEY(no_trabajador)
 );
 
